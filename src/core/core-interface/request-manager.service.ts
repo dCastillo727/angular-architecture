@@ -3,7 +3,7 @@ import {Injectable, Injector} from '@angular/core';
 import {Observable} from 'rxjs';
 
 @Injectable()
-export class Request {
+export class RequestManager {
   protected basePath = '';
   protected http!: HttpClient;
 
@@ -17,9 +17,7 @@ export class Request {
     body: unknown = undefined,
     params?: keyof HttpParams,
   ): Observable<T> {
-    return this.http.request<T>(method, url, {
-      body,
-      params: params ? new HttpParams().set(params, '') : undefined,
-    });
+    console.log(params);
+    return this.http.request<T>(method, url, {body});
   }
 }
