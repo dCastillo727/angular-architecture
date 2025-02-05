@@ -3,7 +3,7 @@ import {
   GetHasNextAndCharactersUseCase
 } from '../../../../../domain/usecase/characters/get-hasnext-and-characters.usecase';
 import {CharactersEntity} from '../../../../../domain/entity/characters/characters-entity.model';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, Observable, Subscription} from 'rxjs';
 
 @Injectable()
 export class HomeViewModel {

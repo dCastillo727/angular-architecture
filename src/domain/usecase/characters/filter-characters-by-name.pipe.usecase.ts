@@ -1,10 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {CharacterResult} from '../../domain/entity/characters/characters-entity.model';
+import {CharacterResult} from '../../entity/characters/characters-entity.model';
 
 @Pipe({
-  name: 'filterCharactersByName'
+  name: 'filterCharactersByNamePipeUseCase'
 })
-export class FilterCharactersByNamePipe implements PipeTransform {
+export class FilterCharactersByNamePipeUseCase implements PipeTransform {
 
   transform(characters: CharacterResult[] | undefined, searchText: string): CharacterResult[] {
     if (!characters) {

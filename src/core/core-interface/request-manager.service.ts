@@ -17,7 +17,6 @@ export class RequestManager {
     body: unknown = undefined,
     params?: keyof HttpParams,
   ): Observable<T> {
-    console.log(params);
     return this.http.request<T>(method, url, {body});
   }
 }

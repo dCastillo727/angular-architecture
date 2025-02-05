@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {HomeComponent} from './view/home.component';
 import {HomeRoutingModule} from './home-routing.module';
-import {DataModule} from '../../../../data/data.module';
 import {HomeViewModel} from './viewmodel/home.viewmodel';
 import {PipesModule} from '../../../../core/pipes/pipes.module';
 import {FormsModule} from '@angular/forms';
-import {FilterCharactersByNamePipe} from '../../../../core/pipes/filter-characters-by-name.pipe';
+import {CharactersUseCaseModule} from '../../../../domain/usecase/characters/characters-use-case.module';
 
 
 
@@ -15,10 +14,8 @@ import {FilterCharactersByNamePipe} from '../../../../core/pipes/filter-characte
   imports: [
     HomeRoutingModule,
     CommonModule,
-    DataModule,
-    PipesModule,
+    CharactersUseCaseModule,
     FormsModule,
-    FilterCharactersByNamePipe,
     NgOptimizedImage,
   ],
   providers: [HomeViewModel],

@@ -3,7 +3,7 @@ import {BehaviorSubject, map, Observable} from 'rxjs';
 import {CharactersEntity} from '../../../domain/entity/characters/characters-entity.model';
 import {Injectable} from '@angular/core';
 import {DtoToEntityRepositoryMapper} from './mapper/dto-to-entity.mapper';
-import {CharactersRemoteDatasource} from '../../datasource/characters/source/characters-remote-datasource';
+import {CharactersRemoteDatasource} from '../datasource/source/characters-remote-datasource';
 
 @Injectable()
 export class CharactersImpRepository extends CharactersRepository {
